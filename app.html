@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>استباق، نموذج تجريبي</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -285,10 +285,11 @@ h3.sec small{font-family:var(--body);font-size:12px;font-weight:400;color:var(--
 @media (max-width:440px){body{padding:16px 0 40px}.phone{transform:scale(.9);transform-origin:top center;margin-bottom:-80px}}
 </style>
 <link rel="manifest" href="manifest.json"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="استباق"><meta name="theme-color" content="#6A3B8B"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" href="icon-192.png">
-<style>@media (max-width:500px){html,body{height:100%;overflow:hidden}body{padding:0!important;display:block!important;background:var(--cream)}body>*:not(.phone){display:none!important}.phone{width:100vw!important;height:100dvh!important;border-radius:0!important;padding:0!important;box-shadow:none!important;transform:none!important;margin:0!important}.phone::before,.notch,.statusbar{display:none!important}.screen{border-radius:0!important;padding-top:env(safe-area-inset-top)}}</style></head>
+<style>@media (max-width:540px), (pointer:coarse) and (max-height:540px){html,body{height:100%;overflow:hidden}body{padding:0!important;display:block!important;background:var(--cream)}body>*:not(.phone){display:none!important}.phone{width:100vw!important;height:100dvh!important;border-radius:0!important;padding:0!important;box-shadow:none!important;transform:none!important;margin:0!important}.phone::before,.notch,.statusbar{display:none!important}.screen{border-radius:0!important;padding-top:env(safe-area-inset-top)}html,body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent}.tabbar{height:calc(84px + env(safe-area-inset-bottom))!important;padding-bottom:env(safe-area-inset-bottom)!important}.view{padding-bottom:calc(110px + env(safe-area-inset-bottom))!important}}.back{width:34px;height:34px;border-radius:10px;border:1px solid var(--line-2);background:#fff;display:flex;align-items:center;justify-content:center;color:var(--purple);flex:none;text-decoration:none}.back svg{width:18px;height:18px}.home-link{display:inline-flex;align-items:center;gap:6px;color:var(--purple);font-weight:600;font-size:14px;text-decoration:none;border:1px solid var(--line-2);background:var(--paper);border-radius:999px;padding:6px 14px;margin-bottom:10px}.home-link svg{width:16px;height:16px}@media (display-mode: standalone){.back{display:none!important}}</style></head>
 <body>
 
 <div class="stage-head">
+  <a class="home-link" href="./"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>الصفحة الرئيسية</a>
   <h1>استباق</h1>
   <p>مؤشر تنبؤي لمخاطر الحوادث المرورية في منطقة الجوف</p>
 </div>
@@ -339,7 +340,7 @@ h3.sec small{font-family:var(--body);font-size:12px;font-weight:400;color:var(--
       <section class="view map-view" id="view-map" aria-label="الخريطة">
         <div class="map-head">
           <div class="topline" style="padding-bottom:4px">
-            <div class="brand"><div class="mark"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18 10 4l4 9 2-4 4 9"/></svg></div><div><div class="name">استباق</div><div class="sub">خريطة المخاطر</div></div></div>
+            <div class="brand"><a class="back" href="./" aria-label="العودة إلى الصفحة الرئيسية"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></a><div class="mark"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18 10 4l4 9 2-4 4 9"/></svg></div><div><div class="name">استباق</div><div class="sub">خريطة المخاطر</div></div></div>
             <span class="pill" style="color:var(--ink-2);background:var(--cream)">سكاكا، التحديث 17:35</span>
           </div>
         </div>
@@ -494,7 +495,7 @@ h3.sec small{font-family:var(--body);font-size:12px;font-weight:400;color:var(--
   function topline(sub){
     const r = roles[role];
     return `<div class="topline">
-      <div class="brand"><div class="mark"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18 10 4l4 9 2-4 4 9"/></svg></div><div><div class="name">استباق</div><div class="sub">${sub}</div></div></div>
+      <div class="brand"><a class="back" href="./" aria-label="العودة إلى الصفحة الرئيسية"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></a><div class="mark"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18 10 4l4 9 2-4 4 9"/></svg></div><div><div class="name">استباق</div><div class="sub">${sub}</div></div></div>
       <div class="avatar" aria-label="${r.title}">${r.initials}</div>
     </div>`;
   }
